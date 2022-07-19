@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap');
+
+ html
+ body{
+    width: 100%;
+    background-color: rgb(222, 195, 248);
+    box-sizing: border-box;
+    font-family: 'Quattrocento Sans', sans-serif;
+ }
+ nav{
+    background-color: rebeccapurple;
+}
+.navbar-brand{
+    color: wheat;
+}
+.main{
+    padding: 5vh 5vw;
+    margin: auto;
+}
+
+input, textarea{
+   width:100%;
+   border: none;
+   border-radius: 6px;
+   padding: 5px;
+   background-color: rgba(255, 255, 255, 0.774);
+   margin: 10px 0;
+}
+
+.form{
+    padding: 5vh 5vw;
+    border-radius: 6px;
+    background-color: rgba(128, 128, 128, 0.568);
+}
+label{
+    font-size: 20px;
+    font-weight: 900;
+}
+.comment-form {
+    width:300px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgba(128, 128, 128, 0.568);
+    margin: 5px 0;
+}
+.comment-form label{
+    margin-bottom: -5px;
+}
+.comment-form input, .comment-form textarea{
+        width:100%;
+        background-color: rgba(255, 255, 255, 0.774);
+}
+
+input[type="submit"]{
+    width:150px;
+    margin: 15px 0;
+ }
+
+ol li{
+    margin: 8px 0;
+}
+ol li p{
+    margin: 0;
+}
+
+select{
+    width:150px;
+    border: none;
+    border-radius: 6px;
+    padding: 5px;
+
+}
