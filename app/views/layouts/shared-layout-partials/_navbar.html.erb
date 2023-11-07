@@ -1,0 +1,31 @@
+<!-- navbar -->
+        <nav class="navbar">
+        <div class="logo_item">
+
+          <i class="bx bx-menu" id="sidebarOpen"></i>
+
+          <a href="/">
+          <img src="<%= asset_path('logo.png') %>">
+          </a>
+        </div>
+  
+        <div class="navbar_content">
+          <i class="bx bx-bell bx-sm"></i>
+          <i class='bx bxs-user-circle bx-lg profile'></i>
+
+
+      <!-- profile options like current user email and sign out -->
+      
+          <div class="user-options hide ">
+                <p>
+                <i class='bx bx-user-check bx-sm'></i>
+                <%= current_user.email %>
+                </p>
+                <p>
+                <i class='bx bx-arrow-from-left bx-sm'></i>
+                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+                </p>
+         </div>
+
+        </div>
+        </nav>

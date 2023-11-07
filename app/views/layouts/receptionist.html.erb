@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Receptionist Dashboard</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "admin", "data-turbo-track": "reload" %>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+  </head>
+
+  <body>
+    <!-- sidebar  -->
+      <%= render 'layouts/shared-layout-partials/sidebar' %>
+
+    <!-- navbar -->
+      <%= render 'layouts/shared-layout-partials/navbar' %>
+
+
+    <!-- main  -->
+    <div class="admin-main">
+          <!-- main -->
+            <div class='main-content'>
+             <%= render 'layouts/shared-layout-partials/flash_messages' %>
+                  <div class="main">
+                    <%= yield %>
+                 <div>
+            </div>
+    </div>
+
+    <!---******* sticking footer to bottom ********* -->
+      </div>
+
+      
+    <!-- footer -->
+      <%= render 'layouts/shared-layout-partials/footer' %>
+
+
+    <!-- load javascript common for admin and user  -->
+    <%= javascript_include_tag 'common', 'data-turbolinks-track': 'reload' %>
+    <!-- load javascript for admin  -->
+    <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>

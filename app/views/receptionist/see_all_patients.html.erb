@@ -1,0 +1,68 @@
+
+<!-- some text and button -->
+<div class="d-flex justify-content-between flex-wrap">
+  <span>All patients</span>
+  <a href="/new-patient" class="btn btn-primary btn-sm">Add patient</a>
+</div>
+
+<!-- table -->
+<div class="table-div">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <!-- table  head-->
+      <tr class="table-primary">
+        <th>Serial No.</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile No.</th>
+        <th>Edit patient</th>
+        <th>Delete patient</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- for serial number -->
+      <% index = 1%> <% @patients.each do |patient| %>
+      <!-- table  row -->
+      <tr>
+        <td><%=index %></td>
+        <td><%= patient.name %></td>
+        <td><%= patient.email %></td>
+        <td><%=patient.number %></td>
+
+
+        <td>
+          <a
+            href="/edit-patient/<%=patient.id%>"
+            class="btn btn-outline-primary btn-sm"
+          >
+            Edit patient
+          </a>
+        </td>
+        
+        <td>
+
+        <button
+            type="button"
+            class="btn btn-outline-danger btn-sm"
+            data-bs-toggle="modal"
+            data-bs-target="#delete<%=patient.id%>"
+          >    Delete patient </button>      
+        </td>
+    <!-- delete confirmation modal for patient -->
+        <%= render 'delete_confirmation_modal',
+          id: patient.id,
+          route: "/delete-patient/#{patient.id}",
+          heading: "Delete patient #{patient.email}",
+          body: "patient and all the associated data will be deleted.",
+          can_delete: true
+          %>
+
+      </tr>
+      <% index += 1 %> 
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+

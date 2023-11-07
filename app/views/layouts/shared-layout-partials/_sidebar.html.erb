@@ -1,0 +1,17 @@
+<!-- sidebar -->
+    <nav class="sidebar close">
+      <div class="menu_content">
+        <ul class="menu_items">
+          <div class="menu_title menu_dahsboard"></div>
+
+
+          <% if current_user.is_doctor? %>
+          <%= render partial: 'layouts/shared-layout-partials/doctor_sidebar_options' %>
+        <% else %>
+          <%= render partial: 'layouts/shared-layout-partials/receptionist_sidebar_options' %>
+        <% end %>
+
+
+        
+      </div>
+    </nav>

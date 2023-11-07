@@ -1,0 +1,40 @@
+
+<!-- some text and button -->
+<div class="d-flex justify-content-between flex-wrap">
+  <span>All patients</span>
+  <a href="/new-patient" class="btn btn-primary btn-sm">Add patient</a>
+</div>
+
+<!-- table -->
+<div class="table-div">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <!-- table  head-->
+      <tr class="table-primary">
+        <th>Serial No.</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile No.</th>
+        <th>DOB</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- for serial number -->
+      <% index = 1%> <% @patients.each do |patient| %>
+      <!-- table  row -->
+      <tr>
+        <td><%=index %></td>
+        <td><%= patient.name %></td>
+        <td><%= patient.email %></td>
+        <td><%=patient.number %></td>
+        <td><%=patient.birthdate %></td>
+
+      </tr>
+      <% index += 1 %> 
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+

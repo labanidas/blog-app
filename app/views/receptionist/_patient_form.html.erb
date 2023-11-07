@@ -1,0 +1,33 @@
+<!-- form for creating a new patient -->
+<%= form_tag({ action: @action }, method: "post", class: "border p-3 mt-3") do %>
+
+  <!-- text field for patient name -->
+  <div class="mb-3">
+    <%= label_tag(:name, "Patient Name:", class: "form-label") %>
+    <%= text_field_tag(:name, patient.name, class: "form-control", required: true) %><br />
+  </div>
+
+  <!-- tel field for mobile number -->
+  <div class="mb-3">
+    <%= label_tag(:number, "Mobile Number:", class: "form-label") %>
+    <%= number_field_tag(:number, patient.number, class: "form-control", required: true) %><br />
+  </div>
+  
+
+  <!-- email field for email -->
+  <div class="mb-3">
+    <%= label_tag(:email, "Email:", class: "form-label") %>
+    <%= email_field_tag(:email, patient.email, class: "form-control") %><br />
+  </div>
+  
+
+  <!-- date field for birthdate -->
+  <div class="mb-3">
+    <%= label_tag(:birthdate, "Birthdate:", class: "form-label") %>
+    <%= date_field_tag(:birthdate, patient.birthdate, class: "form-control", required: true) %><br />
+  </div>
+
+  <!-- submit button -->
+  <%= submit_tag("Submit", class: "btn btn-primary btn-sm") %>
+
+<% end %>

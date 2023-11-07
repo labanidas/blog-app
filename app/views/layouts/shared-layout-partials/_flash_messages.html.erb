@@ -1,0 +1,10 @@
+  
+
+<% if !notice.nil? %>
+  <%= render 'layouts/shared-layout-partials/notice' , notice: notice, cssClass: "success"%>
+<% end %>
+
+
+<% if !alert.nil? %>
+    <%= render 'layouts/shared-layout-partials/notice' , notice: alert, cssClass: "danger" %>
+<% end %>

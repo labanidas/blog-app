@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-between flex-wrap">
+  <span><b>Number of Patients Registered vs Days</b></span>
+</div>
+
+<br>
+<br>
+<div>
+  <%= area_chart(Patient.group_by_day(:created_at).count) %>
+</div>
