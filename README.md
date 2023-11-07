@@ -2,10 +2,20 @@
 
 Necessary steps to get the application up and running.
 
-1. bundle
+a.	Download zipped (Link)
 
-2. rails db:create
+b.	Cd ‘folder-name’
 
-3. rails db:migrate
+c.	create database in postgreSQL 
 
-4. 
+i.	https://youtu.be/-ajUunAwezo?si=Ah4vpnHD_OffiafA
+
+d.	Bundle
+
+e.	Rails db:migrate
+
+f.	Rails db:seed
+
+g.	Rails s
+
+
