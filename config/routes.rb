@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     get 'edit-patient/:id', to: "receptionist#update_patient"
     post 'edit-patient/:id', to: "receptionist#save_updated_patient"
     # delete a patient
-    post 'delete-patient/:id', to: 'receptionist#destroy_patient'
+    delete  'delete-patient/:id', to: 'receptionist#destroy_patient'
     # book appointment
     # delete an appointment
   end

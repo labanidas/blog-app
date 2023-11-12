@@ -35,8 +35,8 @@
               <!-- delete --> 
             
               <% if can_delete %>
-                <%= button_to  "Confirm", route , class: "btn
-                      btn-danger btn-sm", data: { turbo_method: :delete, } %>
+                <%= link_to  "Confirm", route , class: "btn
+                      btn-danger btn-sm", data: { turbo_method: :delete },  method: :delete %>
               <% end %>
 
             </div>
